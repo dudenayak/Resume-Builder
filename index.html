@@ -16,7 +16,7 @@
 
         <!-- HTML CODE -->
 
-     <div class="container">
+     <div class="container" id="resume-form">
         <h1 class="text-center my-2">Resume Builder</h1>
         <p class="text-center">By Devesh Jain</p>
 
@@ -28,7 +28,7 @@
 
                 <div class="form-group">
                     <label for="nameField">Name</label>
-                    <input type="text" id="contactField" 
+                    <input type="text" id="nameField" 
                     placeholder="Enter here" class="form-control" />
                 </div>
 
@@ -45,11 +45,17 @@
                     placeholder="Enter here" class="form-control" rows="5"></textarea> 
                 </div>
 
+
+                <div class="form-group mt-3">
+                    <label for="">Select your photo</label>
+                    <input id="imgField" type="file" class="form-control"/>
+                </div>
+
                 <p class="text-secondary my-3">Important Links</p>
 
                 <div class="form-group mt-2">
                     <label for="liField">LinkedIn</label>
-                    <input type="text" id="liField" 
+                    <input id="liField" type="text" id="liField" 
                     placeholder="Enter here" class="form-control" />
                 </div>
 
@@ -73,7 +79,8 @@
 
                 <div class="form-group mt-2">
                     <label for="">Objective</label>
-                    <textarea
+                    <textarea 
+                    id="objField"
                     placeholder="Enter here" class="form-control " rows="5"></textarea> 
                 </div>
 
@@ -103,9 +110,105 @@
         </div>
 
         <div class="container text-center mt-3">
-        <button class="btn btn-primary btn-lg">Generate Resume</button>
+        <button onclick="generateResume()" class="btn btn-primary btn-lg">Generate Resume</button>
         </div>
 
+     </div>
+
+    <!-- RESUME TEMPLATE -->
+
+     <div class="container" id="resume-template">
+        <div class="row">
+          <div class="col-md-4 text-center py-5 background ">
+              
+    <!-- FIRST COLUMN -->
+
+            <img src="profile_pic.jpg" alt=""
+            class="img-fluid myimg" 
+            id="imgTemplate"
+            />
+
+            <div class="container">
+                <p id="nameT1">Devesh Jain</p>
+                <p id="contactT" >9999108799</p>
+                <p id="addressT" >Delhi,India</p>
+                <hr />
+                <p>
+                    <a id="gitT" href="#1">https://www.github.com/dudenayak</a>
+                </p>
+                <p>
+                    <a id="liT" href="#1">https://www.linkedin.com/dudenayak</a>
+                </p>
+                <p>
+                    <a id="ccT" href="#1">https://www.codechef.com/dudenayak</a>
+                </p>
+            </div>
+
+            </div>
+            <div class="col-md-8 py-5">
+            
+    <!-- SECOND COLUMN -->
+    <h1 id="nameT2" class="text-center" style="font-weight: 980">
+        Devesh Jain        
+        </h1>
+        
+        <!-- OBJECTIVE CARD -->        
+        <div class="card mt-4">        
+        <div class="card-header background">
+            <h3>Objective</h3>
+        </div>        
+        <div class="card-body">
+            <p id="objT">Lorem ipsum dolor sit amet consectetur adipisicing elit. Accusamus at quasi eius itaque ad, temporibus minima dolore ab tenetur laboriosam hic consequatur corporis nostrum, numquam odio modi. Ipsa modi itaque beatae similique, vitae voluptatem quam error! Similique reiciendis omnis, officia blanditiis quam ipsam id amet nobis accusamus illum magni soluta.</p>
+        </div>        
+        </div>
+
+         <!-- WORK EXPERIENCE -->        
+         <div class="card mt-4">        
+            <div class="card-header background">
+                <h3>Work Experience</h3>
+            </div>        
+            <div class="card-body">
+                <ul id="weT">
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat?</li>
+                </ul>
+                <!-- <ul>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat?</li>
+                </ul>
+                <ul>
+                    <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat?</li>
+                </ul> -->
+                
+            </div>        
+            </div>
+
+        <!-- ACADEMIC QUALIFICATION -->
+                
+                 <div class="card mt-4">        
+                    <div class="card-header background">
+                        <h3>Academic Qualification</h3>
+                    </div>        
+                        <div class="card-body">
+                            <ul id="aqT">
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat?</li>
+                            </ul>
+                            <!-- <ul>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat?</li>
+                            </ul>
+                            <ul>
+                                <li>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Exercitationem, quaerat?</li>
+                            </ul> -->
+                            
+                        </div>        
+                        </div>
+
+                        <div class="container mt-3 text-center">
+                            <button onclick="printResume()" class="btn background">
+                                Print Resume
+                            </button>
+                        </div>
+
+        </div>
+        </div>
      </div>
 
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

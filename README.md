@@ -2,7 +2,7 @@
 
 * A modern dynamic Resume Builder created  using HTML and JavaScript which is used for returning the Resume Template where the details are sent using API. 
 
-* Demo link: https://proud-rock-064b1f610.azurestaticapps.net/
+* Demo link: https://dudenayak.github.io/Resume-Builder/
 
 * User can enter their details including the professional links(LinkedIn, GitHub, Code Chef) along with their work experience and academic qualification which would generate a neatly formatted resume that could further be downloaded or printed.
 
